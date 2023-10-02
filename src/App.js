@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './assets/css/App.scss';
+import { ModalContent } from './components/Modal/Modal';
 
 const ImageUrls = [
   [
@@ -21,6 +22,24 @@ function App() {
   const handleImageClick = (url) => () => {
     setUrl(url);
     setOpen(true);
+    // remove scroll bar when modal is opened
+    document.getElementsByTagName('body')[0].classList.add("modal-open");
+  }
+
+  const handleCloseModal = () => {
+    setOpen(false);
+    // add scroll bar when modal is closed
+    document.getElementsByTagName('body')[0].classList.remove("modal-open");
+  }
+
+  const renderModal = () => {
+    if (open) {
+      return (
+        <ModalContent onClose={handleCloseModal}>
+          <img className='modal-image' src={url} alt="Image Modal" />
+        </ModalContent>
+      )
+    }
   }
 
   return (
@@ -62,6 +81,7 @@ function App() {
           </div>
         </article>
       </section>
+      {renderModal()}
     </main>
   );
 }
