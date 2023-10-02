@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'OpenSans-Light', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+main {
+  max-width: 1210px;
+  padding: 0px 10px;
+  margin: auto;
+  margin-top: 185px;
+  margin-bottom: 240px;
+}
