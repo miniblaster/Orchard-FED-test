@@ -23,6 +23,50 @@ img {
   }
 }
 
+.section-two {
+  margin-top: 240px;
+
+  header {
+    font-size: 42px;
+    font-weight: 100;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  img {
+    border-bottom: 4px solid #f00;
+  }
+
+  .details {
+    a, .title {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.2px;
+      letter-spacing: 0.5px;
+    }
+
+    .info {
+      color: #aaa;
+      line-height: 1.8;
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f00;
+      transition: all .5s;
+
+      &:hover {
+        color: #f00;
+      }
+    }
+  }
+}
+
 .col-one-three {
   max-width: 384px;
   margin: auto;

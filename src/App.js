@@ -19,6 +19,10 @@ function App() {
   const [open, setOpen] = useState(false);
   const [url, setUrl] = useState('');
 
+  const handleAnchorClick = () => {
+    console.log("Anchor clicked!");
+  }
+
   const handleImageClick = (url) => () => {
     setUrl(url);
     setOpen(true);
@@ -80,6 +84,59 @@ function App() {
             </p>
           </div>
         </article>
+      </section>
+      <section className='section-two'>
+        <header>ALL THE LATEST FROM AEG</header>
+        <div className='responsive-grid'>
+          <article className='col-one-three'>
+            <div className='thumbnail-container'>
+              <div className='thumbnail'>
+                <img src={ImageUrls[1][0]} alt='img-01.jpg' onClick={handleImageClick(ImageUrls[1][0])} />
+              </div>
+            </div>
+            <div className='details'>
+              <div className='title'>
+                <p>Summer Lunch Menu By Mark Best</p>
+              </div>
+              <div className='info'>
+                <p>AEG ambassador Mark Best's summer eats are guaranteed to help you make the most of the warmer weather and entertaining at home.</p>
+              </div>
+              <a href='#' onClick={handleAnchorClick}>READ MORE</a>
+            </div>
+          </article>
+          <article className='col-one-three'>
+            <div className='thumbnail-container'>
+              <div className='thumbnail'>
+                <img src={ImageUrls[1][1]} alt='img-02.jpg' onClick={handleImageClick(ImageUrls[1][1])} />
+              </div>
+            </div>
+            <div className='details'>
+              <div className='title'>
+                <p>A Traditional Christmas Eve, Mark Best Style</p>
+              </div>
+              <div className='info'>
+                <p>One of Australia's best chefs and AEG ambassador, Mark Best, shares his favourite Christmas Eve menu which is sure to impress your guests.</p>
+              </div>
+              <a href='#' onClick={handleAnchorClick}>READ MORE</a>
+            </div>
+          </article>
+          <article className='col-one-three'>
+            <div className='thumbnail-container'>
+              <div className='thumbnail'>
+                <img src={ImageUrls[1][2]} alt='img-03.jpg' onClick={handleImageClick(ImageUrls[1][2])} />
+              </div>
+            </div>
+            <div className='details'>
+              <div className='title'>
+                <p>Taking Taste Further</p>
+              </div>
+              <div className='info'>
+                <p>This exclusive cookbook gives you all the know-how you need. We've designed it to make sure you get the most out of our products - and the best out of your food.</p>
+              </div>
+              <a href='#' onClick={handleAnchorClick}>READ MORE</a>
+            </div>
+          </article>
+        </div>
       </section>
       {renderModal()}
     </main>
